@@ -105,7 +105,10 @@ html(lang='en')
               span(aria-hidden='true') ×
             // 16:9 aspect ratio
             .embed-responsive.embed-responsive-16by9
-              iframe#video.embed-responsive-item(src='', allowscriptaccess='always') >
+              iframe#video.embed-responsive-item(src='', allowscriptaccess='always' allowfullscreen="allowfullscreen"  mozallowfullscreen="mozallowfullscreen" 
+        msallowfullscreen="msallowfullscreen" 
+        oallowfullscreen="oallowfullscreen" 
+        webkitallowfullscreen="webkitallowfullscreen") >
 
     footer 
     // build:js assets/main.min.js
