@@ -55,10 +55,13 @@ main
       flex-grow: 1
       flex-basis: 260px
       height: 160px
+      max-width: 300px
       background: linear-gradient(145deg, #00c1da, #003bca)
       margin: 5px 10px 5px 10px
       border: 1px solid black
       border-radius: 5px
+      word-wrap: break-word
+
       
 
       &:hover
@@ -73,9 +76,17 @@ main
         height: 100%
         cursor: pointer
         text-decoration: none 
+
+
         .item-content
+          height: 100% 
+          width: 100%
           color: white
           text-align: center
+          display: inline-block
+          white-space: normal
+
+          
 
 
 
