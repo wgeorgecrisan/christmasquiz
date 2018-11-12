@@ -1,20 +1,65 @@
-body 
-  background: #faa500
-  display: block
-  flex-flow: column nowrap
-  width: 80%
-  margin: auto
-  padding: 5px
-  animation-duration: 0.4s 
-  width: auto
-  background: white 
-  background: rgba(211,211,222,0.1)
-  height: 2000px
-  header
-    height: 100px
-    width: 100%
-    display: inline-block
-    background: orange
 
-.well 
-  background: grey !important
+// Fonts 
+@import url('https://fonts.googleapis.com/css?family=Holtwood+One+SC|Mountains+of+Christmas|Nova+Cut')
+
+//font-family: 'Mountains of Christmas', cursive;
+//font-family: 'Holtwood One SC', serif;
+//font-family: 'Nova Cut', cursive;
+
+  // Colors
+$primary-red: #BB2528
+$secondary-red: #EA4630
+$color-yellow: #F8B229
+$primary-green: #146B3A 
+$secondary-green: #165B33
+
+body 
+  background: linear-gradient($secondary-red 50%,$primary-red 100%)
+  background-repeat: no-repeat
+  background-size: content
+  min-height: 100vh
+  min-width: 100%
+
+header 
+  padding: 50px 0 50px 0
+  h1
+    color: $secondary-green  
+    font-family: 'Mountains of Christmas', cursive
+    font-weight: 900
+    text-align: center
+    text-shadow: 3px 2px 20px $color-yellow
+    font-size: 40px
+  
+  .header-text
+    margin: auto
+    max-width: 50%
+    color: white
+    font-family: 'Nova Cut', cursive
+    padding: 10px
+
+main
+  display: block
+  margin: auto
+  max-width: 70%
+  .items-container
+    width: 100%
+    background: lightblue
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-around
+    padding: 5px 0 5px 0
+    .item 
+      width: 240px
+      height: 160px
+      background: lime
+      margin: 5px 10px 5px 10px
+      border: 1px solid black
+      &:hover
+        transform: scale(1.1)
+
+footer 
+  height: 230px          
+
+
+
+  
