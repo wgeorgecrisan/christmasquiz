@@ -14,5 +14,30 @@ data.forEach((element,i) => {
 
       $(collectionLink[i]).attr('href', element.video_url);
       $(collectionIC[i]).text(element.question);
-      
+
 });
+
+
+var $videoSrc;  
+
+$('.ylink').click(function() {
+    $videoSrc = $(this).attr( "href" );
+    console.log($videoSrc, '5436546456');
+});
+
+
+  
+
+$('#myModal').on('shown.bs.modal', function (e) {
+    
+$("#video").attr('src',$videoSrc + "?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1" ); 
+})
+  
+  
+
+$('#myModal').on('hide.bs.modal', function (e) {
+
+    $("#video").attr('src',$videoSrc); 
+}) 
+    
+    
