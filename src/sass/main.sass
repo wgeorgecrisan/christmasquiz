@@ -46,7 +46,7 @@ main
   max-width: 70%
   .items-container
     width: 100%
-    background: lightblue
+    background: transparent
     display: flex
     flex-flow: row wrap
     justify-content: space-around
@@ -55,13 +55,17 @@ main
       flex-grow: 1
       flex-basis: 260px
       height: 160px
-      background: lime
+      background: linear-gradient(145deg, #00c1da, #003bca)
       margin: 5px 10px 5px 10px
       border: 1px solid black
+      border-radius: 5px
       
 
       &:hover
         transform: scale(1.1)
+        transition: transform
+        transition-duration: 650ms
+
 
       .ylink
         display: block
