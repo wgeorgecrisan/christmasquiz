@@ -73,7 +73,7 @@ gulp.task('browserSync', function(){
  //5. task to optimize images
 
 gulp.task('images',()=>{
-     return gulp.src('src/images/*.+(png|jpg|gif|svg)')
+     return gulp.src('src/assets/images/*.+(png|jpg|gif|svg)')
             .pipe(cache(imagemin([
                 imagemin.gifsicle({interlaced: true}),
                 imagemin.jpegtran({progressive: true}),
@@ -85,7 +85,7 @@ gulp.task('images',()=>{
                     ]
                 })
             ])))
-            .pipe(gulp.dest('dist/assets/img'))
+            .pipe(gulp.dest('dist/assets/images'))
 });
 
 //6. task to move fonst from src to dist folder
