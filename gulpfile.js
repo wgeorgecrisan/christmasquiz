@@ -99,7 +99,7 @@ gulp.task('movefonts',()=>{
 gulp.task('useref',()=>{
       return gulp.src('src/index.html')
       .pipe(useref())
-      .pipe(gulp.dest('dist'))
+      .pipe(gulp.dest('dist/'))
 });
 
 //.8 task to development. watch files and reload take care of task nr 1,2,3,4;

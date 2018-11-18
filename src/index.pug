@@ -45,36 +45,28 @@ html(lang='en')
       area(shape='circle', coords='1516,599,23', data-toggle="modal" data-target="#modaltext" href='#24')
     .center
       img.main_image(src='assets/images/map.jpg', width='1800', height='1192', usemap='#MAPMap')
-      //img#2.window1(src='assets/images/windows/1.jpg', width='125', height='122')
-      //img.window2(src='assets/images/windows/2.jpg', width='125', height='122')
-      //img.window3(src='assets/images/windows/3.jpg', width='125', height='122')
-    
 
-  #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='videomodal', aria-hidden='true')
-    .modal-dialog(role='document')
-      .modal-content
-        .modal-body
-          button.close(type='button', data-dismiss='modal', aria-label='Close')
-            span(aria-hidden='true') ×
-          .embed-responsive.embed-responsive-16by9
-            iframe#video.embed-responsive-item(src='', allowscriptaccess='always' allowfullscreen="allowfullscreen"  mozallowfullscreen="mozallowfullscreen" 
-      msallowfullscreen="msallowfullscreen" 
-      oallowfullscreen="oallowfullscreen" 
-      webkitallowfullscreen="webkitallowfullscreen") 
-
-  #modaltext.modal.fade(tabindex='-1', role='dialog', aria-labelledby='videomodal', aria-hidden='true')
-    .modal-dialog(role='document')
-      .modal-content
-        .modal-body
-          button.close(type='button', data-dismiss='modal', aria-label='Close')
-            //span(aria-hidden='true') ×
-          .content-modal-message 
-            h3.content-text-message 
-            button(data-toggle="modal" class='btn btn-success'  data-dismiss='modal' data-src="" data-target="#myModal") Play video  
-
+    #modaltext.modal.fade(tabindex='-1', role='dialog', aria-labelledby='videomodal', aria-hidden='true')
+      canvas#canvas
+      .modal-dialog(role='document')
+        .modal-content     
+          .modal-body  
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true') ×   
+            .content-1 
+              .content-modal-message 
+                h3.content-text-message   
+            .content-2(data-run='')
+              .embed-responsive.embed-responsive-16by9
+                iframe#video.embed-responsive-item(src='', allowscriptaccess='always' allowfullscreen="allowfullscreen"  mozallowfullscreen="mozallowfullscreen" 
+          msallowfullscreen="msallowfullscreen" 
+          oallowfullscreen="oallowfullscreen" 
+          webkitallowfullscreen="webkitallowfullscreen") 
+            button( class='btn btn-success btn_super_power'  ) Play
     // build:js assets/main.min.js
     script(src='js/jquery.min.js')
     script(src='js/bootstrap.bundle.min.js')
+    script(src='js/jquery.imagemapster.min.js')
     script(src='js/lodash.min.js')
     script(src='js/main.js')
     // endbuild

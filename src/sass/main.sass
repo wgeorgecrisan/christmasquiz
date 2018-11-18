@@ -27,6 +27,12 @@ body
   .main_image
     margin: auto
     display: block
+    user-drag: none
+    user-select: none
+    -moz-user-select: none
+    -webkit-user-drag: none
+    -webkit-user-select: none
+    -ms-user-select: none
 
 
 //Modal Sass
@@ -34,7 +40,8 @@ body
 .modal-dialog 
   max-width: 800px
   margin: 30px auto
-  
+  z-index: 4 
+  position: relative  
 
 
 .modal-content
@@ -62,6 +69,10 @@ body
     color: red
     text-shadow: none
     
+.hide 
+  display: none
+  opacity: 0
+  //transition: opacity 500ms 0 ease-in-out
 
 #modaltext
   .modal-content
@@ -71,21 +82,47 @@ body
       background-color: rgba(33, 37, 41, 0)
       border: none
       .content-modal-message
-        background-color: rgba(255,255,255 , 0)
+        background-image: url('../assets/images/modal.png')
+        background-repeat: no-repeat
+        background-size: cover
         border: none
-        border-radius: 30px
+        border-radius: 5px
         display: flex 
         flex-flow: row wrap
         h3 
           width: 100%
-          color: #e6032a
-          margin: 50px auto
+          color: #28a745
+          margin: 50px auto 200px auto
           text-align: center
           font-family: 'Mountains of Christmas', cursive
           font-weight: bold
           letter-spacing: 2px
           font-size: 60px
-          text-shadow: 1px 2px 10px $color-yellow
+          text-shadow: 1px 2px 10px green
+          cursor: default
+          z-index: 2
+          position: relative
 
         button 
           margin: 0 auto 50px auto  
+          z-index: 10
+
+#canvas 
+  position: fixed
+  margin: auto
+  z-index: 3
+
+.content-2
+  display: none
+
+.content-1 
+  display: block
+
+.btn_super_power
+  background-color: rgba(40, 167, 69, 0.5)
+  margin: auto !important
+  display: block
+  position: relative
+  top: -60px
+  min-width: 200px
+  text-align: center
