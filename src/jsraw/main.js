@@ -52,6 +52,7 @@ superbutton.click((event)=>{
 
 
 // Snow effect 
+/*
 (function() {
     var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
     function(callback) {
@@ -167,4 +168,13 @@ window.addEventListener("resize",function(){
     canvas.height = window.innerHeight;
 })
 
-init();
+init(); 
+*/
+snowStorm.flakesMax = 400;
+snowStorm.flakesMaxActive = 350;    
+snowStorm.useTwinkleEffect = false;
+snowStorm.followMouse = false;
+snowStorm.freezeOnBlur = false;
+snowStorm.snowStick = false;
+snowStorm.snowCharacter = '•';
+snowStorm.useMeltEffect = false;
