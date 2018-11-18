@@ -19,7 +19,7 @@
 <!--        a.ylink(href='' class="btn video-btn" data-toggle="modal" data-src="" data-target="#myModal") -->  
 <!--          p.item-content -->  
 <body><map name="MAPMap">
-    <area shape="circle" coords="688,540,23" data-toggle="modal" data-target="#modaltext" href="#1">
+    <area shape="circle" data-maphilight="{&quot;strokeColor&quot;:&quot;FF0000&quot;,&quot;strokeWidth&quot;:5,&quot;fillColor&quot;:&quot;ffffff&quot;,&quot;fillOpacity&quot;:0.5}" coords="688,540,23" data-toggle="modal" data-target="#modaltext" href="#1">
     <area shape="circle" coords="1295,245,23" data-toggle="modal" data-target="#modaltext" href="#2">
     <area shape="circle" coords="1528,534,23" data-toggle="modal" data-target="#modaltext" href="#3">
     <area shape="circle" coords="767,935,23" data-toggle="modal" data-target="#modaltext" href="#4">
@@ -43,9 +43,11 @@
     <area shape="circle" coords="572,994,23" data-toggle="modal" data-target="#modaltext" href="#22">
     <area shape="circle" coords="1632,710,23" data-toggle="modal" data-target="#modaltext" href="#23">
     <area shape="circle" coords="1516,599,23" data-toggle="modal" data-target="#modaltext" href="#24"></map>
-  <div class="santa"> <img class="main_image" src="assets/images/santa.png"></div>
-  <div class="clouds"> <img class="main_image" src="assets/images/clouds.png"></div>
-  <div class="center"><img class="main_image" src="assets/images/map.jpg" width="1800" height="1192" usemap="#MAPMap"></div>
+  <div class="santa"> <img src="assets/images/santa.png"></div>
+  <div class="clouds"> <img src="assets/images/clouds.png"></div>
+  <div class="center">
+    <div class="mapsterfaster"><img class="main_image" src="assets/images/map.jpg" width="1800" height="1192" usemap="#MAPMap"></div>
+  </div>
   <div class="modal fade" id="modaltext" tabindex="-1" role="dialog" aria-labelledby="videomodal" aria-hidden="true">
     <canvas id="canvas"></canvas>
     <div class="modal-dialog" role="document">
@@ -70,6 +72,7 @@
   <!-- build:js assets/main.min.js-->
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery.imagemapster.min.js"></script>
   <script src="js/snowstorm-min.js"></script>
   <script src="js/main.js"></script>
   <!-- endbuild-->

@@ -19,7 +19,7 @@ html(lang='en')
 <!--          p.item-content -->  
   body
     map(name='MAPMap')
-      area(shape='circle', coords='688,540,23', data-toggle="modal"  data-target="#modaltext" href='#1')
+      area(shape='circle', data-maphilight='{"strokeColor":"FF0000","strokeWidth":5,"fillColor":"ffffff","fillOpacity":0.5}' coords='688,540,23', data-toggle="modal"  data-target="#modaltext" href='#1')
       area(shape='circle', coords='1295,245,23', data-toggle="modal" data-target="#modaltext" href='#2')
       area(shape='circle', coords='1528,534,23', data-toggle="modal" data-target="#modaltext"  href='#3')
       area(shape='circle', coords='767,935,23', data-toggle="modal"  data-target="#modaltext" href='#4')
@@ -44,11 +44,12 @@ html(lang='en')
       area(shape='circle', coords='1632,710,23', data-toggle="modal" data-target="#modaltext" href='#23')
       area(shape='circle', coords='1516,599,23', data-toggle="modal" data-target="#modaltext" href='#24')
     .santa  
-      img.main_image(src='assets/images/santa.png')
+      img(src='assets/images/santa.png')
     .clouds 
-      img.main_image(src='assets/images/clouds.png')  
+      img(src='assets/images/clouds.png')  
     .center
-      img.main_image(src='assets/images/map.jpg', width='1800', height='1192', usemap='#MAPMap')
+      .mapsterfaster
+        img.main_image(src='assets/images/map.jpg', width='1800', height='1192', usemap='#MAPMap')
     #modaltext.modal.fade(tabindex='-1', role='dialog', aria-labelledby='videomodal', aria-hidden='true')
       canvas#canvas
       .modal-dialog(role='document')
@@ -69,6 +70,7 @@ html(lang='en')
     // build:js assets/main.min.js
     script(src='js/jquery.min.js')
     script(src='js/bootstrap.bundle.min.js')
+    script(src='js/jquery.imagemapster.min.js')
     script(src='js/snowstorm-min.js')
     script(src='js/main.js')
     // endbuild

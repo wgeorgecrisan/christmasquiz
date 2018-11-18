@@ -184,3 +184,12 @@ snowStorm.snowStick = false;
 snowStorm.snowCharacter = '•';
 snowStorm.useMeltEffect = false;
 
+
+$('.main_image').mapster({
+      strokeWidth: 6,
+      stroke: true,
+      strokeColor: '165B33',
+      fillColor: '165B33',
+      fillOpacity: 0.2
+    });
+
