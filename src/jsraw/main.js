@@ -51,7 +51,7 @@ superbutton.click((event)=>{
 });
 
 
-
+/*
 // Snow effect 
 function insideSnow(){
     (function() {
@@ -171,13 +171,14 @@ function insideSnow(){
     
     init();
 }
- 
+ */
 
 
-snowStorm.flakesMax = 128;
-snowStorm.flakesMaxActive = 128;    
+snowStorm.flakesMax = 150;
+snowStorm.animationInterval = 138;
+snowStorm.flakesMaxActive = 96;    
 snowStorm.useTwinkleEffect = false;
-snowStorm.followMouse = false;
+snowStorm.followMouse = true
 snowStorm.freezeOnBlur = false;
 snowStorm.snowStick = false;
 snowStorm.snowCharacter = '•';

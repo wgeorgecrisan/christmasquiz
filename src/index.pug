@@ -43,9 +43,12 @@ html(lang='en')
       area(shape='circle', coords='572,994,23', data-toggle="modal"  data-target="#modaltext" href='#22')
       area(shape='circle', coords='1632,710,23', data-toggle="modal" data-target="#modaltext" href='#23')
       area(shape='circle', coords='1516,599,23', data-toggle="modal" data-target="#modaltext" href='#24')
+    .santa  
+      img.main_image(src='assets/images/santa.png')
+    .clouds 
+      img.main_image(src='assets/images/clouds.png')  
     .center
       img.main_image(src='assets/images/map.jpg', width='1800', height='1192', usemap='#MAPMap')
-
     #modaltext.modal.fade(tabindex='-1', role='dialog', aria-labelledby='videomodal', aria-hidden='true')
       canvas#canvas
       .modal-dialog(role='document')
