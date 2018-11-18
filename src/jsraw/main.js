@@ -27,15 +27,12 @@ $('area').click((event)=>{
     var modaltext = $('#modaltext');
     sourceSrc = event.target.href;
     textSrc = event.target.title;
-    
-    modaltext.on('shown.bs.modal', function (e) {
-
+    $('.content-text-message').fadeOut(()=>{
         $('.content-text-message').text(textSrc);
-         
     });
-          
-          
-        
+    $('.content-text-message').fadeIn();
+    
+              
     modaltext.on('hide.bs.modal', function (e) {
         content1.css("display","block");
         superbutton.css("display","block");
