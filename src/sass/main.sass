@@ -12,6 +12,8 @@ $secondary-green: #165B33
 
 body 
   background-color: #c7dcea
+  min-width: 100vw
+  position: absolute
   &::-webkit-scrollbar
     display: none
   
@@ -56,6 +58,7 @@ body
   -webkit-user-drag: none
   -webkit-user-select: none
   -ms-user-select: none
+
     
 
 //Modal Sass
@@ -156,10 +159,16 @@ body
   .close 
     right: 0px
   .main_image
+    margin-left: 0px
+  .santa
+    position: fixed
+    left: 100px
+    top: 0px
 
   .modal-dialog 
     width: 90%
     margin: auto 
+    top: -10px
 
   .clouds  
     min-width: 100%

@@ -209,6 +209,8 @@ snowStorm.freezeOnBlur = false;
 snowStorm.snowStick = false;
 snowStorm.snowCharacter = '•';
 snowStorm.useMeltEffect = false;
+snowStorm.excludeMobile = false;
+//snowStorm.targetElement = 'main_image33';
 
 
 $('.main_image').mapster({
