@@ -57,16 +57,16 @@ html(lang='en')
           .modal-body  
             button.close(type='button', data-dismiss='modal', aria-label='Close')
                 span(aria-hidden='true') ×   
-            .content-1 
+            //.content-1 
               .content-modal-message 
                 h3.content-text-message   
-            .content-2(data-run='')
+            .content-1(data-run='')
               .embed-responsive.embed-responsive-16by9
                 iframe#video.embed-responsive-item(src='', allowscriptaccess='always' allowfullscreen="allowfullscreen"  mozallowfullscreen="mozallowfullscreen" 
           msallowfullscreen="msallowfullscreen" 
           oallowfullscreen="oallowfullscreen" 
           webkitallowfullscreen="webkitallowfullscreen") 
-            button( class='btn btn-success btn_super_power'  ) Play
+          //  button( class='btn btn-success btn_super_power'  ) Play
     // build:js assets/main.min.js
     script(src='js/jquery.min.js')
     script(src='js/bootstrap.bundle.min.js')

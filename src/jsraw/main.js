@@ -1,47 +1,73 @@
 "use strict";
 
 
-let jsonData, data, collectionLink , collectionIC, sourceSrc, textSrc;
+let jsonData, dataHere, collectionLink , collectionIC, sourceSrc, textSrc;
 //cache jquery
-let content1 = $('.content-1'), content2 = $('.content-2') , superbutton = $('.btn_super_power');
+//let content2 = $('.content-2') ,content1 = $('.content-1'), superbutton = $('.btn_super_power');
 
-jsonData =  [{"date":"2018-12-01","question":"Question 1 and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-02","question":" Question 2 and question the length and question?","video_url":"https://www.youtube.com/embed/R0DELkWTOHM"},{"date":"2018-12-03","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-04","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-05","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-06","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-07","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-08","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-09","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-10","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-11","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-12","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-13","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-14","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-15","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-16","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-17","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-18","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-19","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-20","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-21","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-22","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-23","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-24","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"}];
+//jsonData =  [{"date":"2018-12-01","question":"Question 1 and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-02","question":" Question 2 and question the length and question?","video_url":"https://www.youtube.com/embed/R0DELkWTOHM"},{"date":"2018-12-03","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-04","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-05","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-06","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-07","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-08","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-09","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-10","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-11","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-12","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-13","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-14","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-15","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-16","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-17","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-18","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-19","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-20","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-21","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-22","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-23","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"},{"date":"2018-12-24","question":"Test question test the length and question?","video_url":"https://www.youtube.com/embed/5yS3Y-d5bDE"}];
+let urlData = 'https://script.google.com/macros/s/AKfycbyKVHV9bnMU0Dw0ve7foszGh0Ra-0kVkbTmwybq6wZ9GusLBqAS/exec';
+// ajax Call
 
-data = JSON.parse(JSON.stringify(jsonData));
+$.ajax({
+
+    dataType: "json",
+    url: urlData
+
+}).then((data)=>{
+
+      dataHere = data;
+
+     dataHere.forEach((element,i) => {
+
+        $(collectionLink[i]).attr({ href: element.video_url,
+                                  title: element.question
+                               });
+  
+  });  
+
+});
+
+
 
 collectionLink = $('area');
 
 collectionIC = $('.item-content');
 
 
-data.forEach((element,i) => {
 
-      $(collectionLink[i]).attr({ href: element.video_url,
-                                title: element.question
-                             });
-
-});
 
 
 $('area').click((event)=>{
     var modaltext = $('#modaltext');
     sourceSrc = event.target.href;
     textSrc = event.target.title;
+    /*
     $('.content-text-message').fadeOut(()=>{
         $('.content-text-message').text(textSrc);
     });
     $('.content-text-message').fadeIn();
-    
+    */
+   modaltext.on('show.bs.modal', function (e) {
+    /* content1.css("display","block");
+     superbutton.css("display","block");
+     content2.css("display","none");
+         $("#video").attr('src', sourceSrc); */
+         $("#video").attr('src', sourceSrc + "?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1" );
+ }); 
               
     modaltext.on('hide.bs.modal', function (e) {
-        content1.css("display","block");
+       /* content1.css("display","block");
         superbutton.css("display","block");
         content2.css("display","none");
+        */
             $("#video").attr('src', sourceSrc); 
+
     }); 
 });
 
 // button functionality
+/*
 superbutton.click((event)=>{
 
     superbutton.css("display","none");
@@ -49,7 +75,7 @@ superbutton.click((event)=>{
       content2.css("display","block"); 
       $("#video").attr('src', sourceSrc + "?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1" );
 });
-
+*/
 
 /*
 // Snow effect 
