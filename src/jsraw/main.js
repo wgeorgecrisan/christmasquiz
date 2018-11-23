@@ -43,7 +43,7 @@ $.ajax({
 }).then(()=>{
 
         $('area[data-disabled=disabled]').mapster('set',false)
-        .mapster('set',true,{ fillColor: 'cd0000', strokeColor: 'cd0000' });
+        .mapster('set',true,{ fillColor: '000000', strokeColor: 'cd0000', strokeWidth: 8 });
 });  
 
 
