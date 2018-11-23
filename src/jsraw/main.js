@@ -1,7 +1,7 @@
 "use strict";
 
 
-let jsonData, dataHere, collectionLink , collectionIC, sourceSrc, textSrc;
+let jsonData, dataHere, collectionLink , collectionIC, sourceSrc, textSrc, latch = false;
 
 let urlData = 'https://script.google.com/macros/s/AKfycbyKVHV9bnMU0Dw0ve7foszGh0Ra-0kVkbTmwybq6wZ9GusLBqAS/exec';
 // ajax Call
@@ -21,19 +21,39 @@ $.ajax({
 
      dataHere.forEach((element,i) => {
 
-        $(collectionLink[i]).attr({ href: element.video_url,
+        $(collectionLink[i]).attr({ href: element.video_url || '#',
                                   title: element.question
                                });
   
   });  
 
-});
+}).then(()=>{
+    Array.prototype.forEach.call(collectionLink,(el)=>{
+         
+         if($(el).attr('href') == '#'){
+             $(el).attr({'data-target':'none',
+                        'data-toggle': 'none',
+                        'title':'DISABLED'});
+                        
+
+         }
+         latch = true;
+    });
+});  
+
+
 
 $('area').click((event)=>{
     var modaltext = $('#modaltext');
     var videoHere = $("#video");
     sourceSrc = event.target.href;
     textSrc = event.target.title;
+
+    if(!latch){
+        return false;
+    }
+
+
     /*
     $('.content-text-message').fadeOut(()=>{
         $('.content-text-message').text(textSrc);
@@ -73,4 +93,3 @@ $('.main_image').mapster({
       fillColor: '165B33',
       fillOpacity: 0.2
     });
-
