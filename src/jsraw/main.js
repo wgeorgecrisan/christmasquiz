@@ -33,12 +33,17 @@ $.ajax({
          if($(el).attr('href') == '#'){
              $(el).attr({'data-target':'none',
                         'data-toggle': 'none',
+                        'data-disabled':'disabled',
                         'title':'DISABLED'});
                         
 
          }
          latch = true;
     });
+}).then(()=>{
+
+        $('area[data-disabled=disabled]').mapster('set',false)
+        .mapster('set',true,{ fillColor: 'cd0000', strokeColor: 'cd0000' });
 });  
 
 
