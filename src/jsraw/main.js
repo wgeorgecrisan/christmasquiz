@@ -37,13 +37,20 @@ $.ajax({
   });  
 
 }).then(()=>{
-    Array.prototype.forEach.call(collectionLink,(el)=>{
+    Array.prototype.forEach.call(collectionLink,(el,i)=>{
          
          if($(el).attr('href') == '#'){
              $(el).attr({'data-target':'none',
                         'data-toggle': 'none',
                         'data-disabled':'disabled'
                     });
+                    
+               let coords = el.coords.split(",").splice(0,2); 
+               
+                 let newdiv = $('<div class="number2"></div>');
+                var $div = $(newdiv).appendTo('body');
+                $($div).css({ display: "block", left: (Number(coords[0]) + 35) + 'px', top: (Number(coords[1]) - 26) + 'px'});  
+
                         
 
          }
@@ -79,12 +86,13 @@ $('area').hover((el)=>{
          if($(el.target).attr('href') == "#"){
 
             state.stateDisable = true;
-            $('.number').css({"border-color": "orange", background: '#fff', color: 'orange'});
+            hoverdiv.css({ visibility: "hidden" });
 
          } else {
 
             state.stateDisable = false;
-            $('.number').css({"border-color": "white" , background: '#3e6d22' , color: 'white '});
+            hoverdiv.css({ visibility: "visible" });
+           // $('.number').css({"border-color": "white" , background: '#3e6d22' , color: 'white '});
             
 
          }

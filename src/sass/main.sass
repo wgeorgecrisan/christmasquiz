@@ -20,6 +20,7 @@ body
   map 
     area
 
+
 .center
   z-index: 0
   display: block
@@ -38,7 +39,7 @@ body
   width: 200px 
   height: 80px
   position: absolute 
-  left: 100px
+  left: 300px
   top: 10px
   z-index: 16
   img 
@@ -155,26 +156,7 @@ body
   text-align: center
 
 
-@media only screen and (max-width: 750px) 
-  .close 
-    right: 0px
-  .main_image
-  .santa
-    position: fixed
-    left: 0px
-    top: 0px
 
-  .modal-dialog 
-    width: 90%
-    margin: auto 
-    top: -10px
-
-  .clouds  
-    min-width: 100%
-    position: fixed
-    width: 100%
-    img 
-      min-width: 100%  
 
 .hoverdiv 
   width: 130px 
@@ -208,3 +190,37 @@ body
       left: -2px
       font-size: 24px
       font-family: 'Mountains of Christmas', cursive
+
+
+.number2
+  border: none
+  display: block
+  pointer-events: none
+  position: absolute
+  width: 50px
+  height: 50px
+  border-radius: 50px
+  background-color:  #d8d8d8
+  color: white
+  opacity: 0.8
+  cursor: none
+@media only screen and (max-width: 750px) 
+  .close 
+    right: 0px
+  .main_image
+  .santa
+    position: fixed
+    left: 100px
+    top: 0px
+
+  .modal-dialog 
+    width: 90%
+    margin: auto 
+    top: -10px
+
+  .clouds  
+    min-width: 100%
+    position: fixed
+    width: 100%
+    img 
+      min-width: 100%      
