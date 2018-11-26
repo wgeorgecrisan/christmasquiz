@@ -49,7 +49,7 @@ $.ajax({
                
                  let newdiv = $('<div class="number2"></div>');
                 var $div = $(newdiv).appendTo('body');
-                $($div).css({ display: "block", left: (Number(coords[0]) + 35) + 'px', top: (Number(coords[1]) - 26) + 'px'});  
+                $($div).css({ display: "block", left: (Number(coords[0]) - 25) + 'px', top: (Number(coords[1]) - 26) + 'px'});  
 
                         
 
@@ -100,7 +100,7 @@ $('area').hover((el)=>{
 
          $('.nrNr').text(state.number);
 
-         hoverdiv.css({ display: "block", left: (coords[0] - 5) + 'px', top: (coords[1] -58) + 'px'});
+         hoverdiv.css({ display: "block", left: (Number(coords[0]) - 65) + 'px', top: (Number(coords[1]) -58) + 'px'});
 }); 
 
 $('#main_image33').on('mouseover',(el)=>{
