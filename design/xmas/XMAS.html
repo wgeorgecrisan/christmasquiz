@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TOCC Christmas Calendar</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#c7dcea">
+		<map name="MAPMap">
+				<area shape="circle" coords="688,540,23" href="#1">
+			  	<area shape="circle" coords="1295,245,23" href="#2">
+		  	  	<area shape="circle" coords="1528,534,23" href="#3">
+				<area shape="circle" coords="767,935,23" href="#4">
+				<area shape="circle" coords="347,920,23" href="#5">
+				<area shape="circle" coords="535,813,23" href="#6">
+				<area shape="circle" coords="1323,950,23" href="#7">
+				<area shape="circle" coords="364,984,23" href="#8">				
+				<area shape="circle" coords="1175,144,23" href="#9">
+				<area shape="circle" coords="960,252,23" href="#10">
+				<area shape="circle" coords="578,475,23" href="#11">
+				<area shape="circle" coords="1583,882,23" href="#12">
+				<area shape="circle" coords="670,941,23" href="#13">				
+				<area shape="circle" coords="801,618,23" href="#14">	
+				<area shape="circle" coords="477,679,23" href="#15">
+				<area shape="circle" coords="477,989,23" href="#16">				
+				<area shape="circle" coords="273,1012,23" href="#17">				
+				<area shape="circle" coords="646,749,23" href="#18">
+				<area shape="circle" coords="1494,896,23" href="#19">				
+				<area shape="circle" coords="1624,624,23" href="#20">
+				<area shape="circle" coords="1663,655,23" href="#21">
+				<area shape="circle" coords="572,994,23" href="#22">				
+			  <area shape="circle" coords="1632,710,23" href="#23">
+				<area shape="circle" coords="1516,599,23" href="#24">
+        </map>
+	
+	<div class="center">
+		<img id="img1" src="Map.jpg" width="1800" height="1192" usemap="#MAPMap"/>
+		<img id="img2" src="windows/1.jpg" class="window1" width="125" height="122"/>
+		<img src="windows/2.jpg" class="window2" width="125" height="122"/>
+		<img src="windows/3.jpg" class="window3" width="125" height="122"/>
+	</div>
+	
+	
+	 <script>
+      var img1 = document.getElementById("img1"),
+          img2 = document.getElementById("img2");
+
+      img1.onmouseover = function(){
+        img2.style.display = "none";
+      }
+
+      img1.onmouseout = function(){
+        img2.style.display = "block";
+      }
+    </script>
+	
+</body>
+</html>

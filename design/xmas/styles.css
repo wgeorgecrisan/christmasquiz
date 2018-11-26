@@ -1,0 +1,26 @@
+.center {
+	z-index: 0;
+}
+.window1 {
+    position: absolute;
+	display: none;	
+    top: 487px;
+    left: 634px;
+    z-index: 1;
+}
+.window2 {
+    position: absolute;
+	display: none;	
+    top: 191px;
+    left: 1244px;
+    z-index: 2;
+}
+.window3 {
+    position: absolute;
+	display: none;	
+    top: 481px;
+    left: 1475px;
+    z-index: 3;
+}
+
+

@@ -2,6 +2,15 @@
 
 
 let jsonData, dataHere, collectionLink , collectionIC, sourceSrc, textSrc, latch = false;
+const hoverdiv = $('.hoverdiv');
+//declare state
+
+var state = {
+    title: '',
+    src: '',
+    number: null,
+    stateDisable: false
+   }
 
 let urlData = 'https://script.google.com/macros/s/AKfycbyKVHV9bnMU0Dw0ve7foszGh0Ra-0kVkbTmwybq6wZ9GusLBqAS/exec';
 // ajax Call
@@ -33,8 +42,8 @@ $.ajax({
          if($(el).attr('href') == '#'){
              $(el).attr({'data-target':'none',
                         'data-toggle': 'none',
-                        'data-disabled':'disabled',
-                        'title':'DISABLED'});
+                        'data-disabled':'disabled'
+                    });
                         
 
          }
@@ -42,29 +51,78 @@ $.ajax({
     });
 }).then(()=>{
 
+
+
+
+});
+   /*
+.then(()=>{
+      
         $('area[data-disabled=disabled]').mapster('set',false)
         .mapster('set',true,{ fillColor: '000000', strokeColor: 'cd0000', strokeWidth: 8 });
+       
 });  
+ */
 
 
-
-$('area').click((event)=>{
-    var modaltext = $('#modaltext');
-    var videoHere = $("#video");
-    sourceSrc = event.target.href;
-    textSrc = event.target.title;
+$('area').hover((el)=>{
 
     if(!latch){
         return false;
+    } 
+
+        let coords = el.target.coords.split(",").splice(0,2);
+         state.src = el.target.href;
+         state.title = el.target.title;
+         state.number = el.target.id;
+
+         if($(el.target).attr('href') == "#"){
+
+            state.stateDisable = true;
+            $('.number').css({"border-color": "orange", background: '#fff', color: 'orange'});
+
+         } else {
+
+            state.stateDisable = false;
+            $('.number').css({"border-color": "white" , background: '#3e6d22' , color: 'white '});
+            
+
+         }
+            
+
+         $('.nrNr').text(state.number);
+
+         hoverdiv.css({ display: "block", left: (coords[0] - 5) + 'px', top: (coords[1] -58) + 'px'});
+}); 
+
+$('#main_image33').on('mouseover',(el)=>{
+        $('.nrNr').text("");
+        hoverdiv.css({display: "none" ,left: 0 + 'px', top: 0 + 'px'});
+        
+
+}); 
+
+hoverdiv.click((event)=>{
+    
+    hoverdiv.css({display: "none" ,left: 0 + 'px', top: 0 + 'px'});
+
+    if(!latch){
+        return false;
+    } 
+    
+    if(state.stateDisable){
+        
+        return false;
     }
+    
 
+    var modaltext = $('#modaltext');
+    var videoHere = $("#video");
+    sourceSrc = state.src;
+    textSrc = state.title;
 
-    /*
-    $('.content-text-message').fadeOut(()=>{
-        $('.content-text-message').text(textSrc);
-    });
-    $('.content-text-message').fadeIn();
-    */
+      
+
    modaltext.on('show.bs.modal', function (e) {
 
     videoHere.attr('src', sourceSrc + "?rel=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1" );
@@ -89,7 +147,7 @@ snowStorm.snowCharacter = '•';
 snowStorm.useMeltEffect = false;
 snowStorm.excludeMobile = false;
 //snowStorm.targetElement = 'main_image33';
-
+/*
 
 $('.main_image').mapster({
       strokeWidth: 6,
@@ -98,3 +156,5 @@ $('.main_image').mapster({
       fillColor: '165B33',
       fillOpacity: 0.2
     });
+
+*/
