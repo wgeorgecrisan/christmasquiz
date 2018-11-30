@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <title>TOCC Christmas Quiz !</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0 , maximum-scale=3.0">
+    <meta name="author" content="g.crisan@tabs-software.co.uk">
+    <meta name="description" content="TOCC Christmas Quiz">
+    <link rel="icon" type="image/png" href="assets/images/OC-FAVICON_32x32.ico">
+    <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas" rel="stylesheet">
+    <link rel="stylesheet" href="assets/bundle.min.css">
+  </head>
+</html><!--  main-->  
+<!--    section.items-container -->  
+<!--      .item -->  
+<!--        a.ylink(href='' class="btn video-btn" data-toggle="modal" data-src="" data-target="#myModal") -->  
+<!--          p.item-content -->  
+<body><map name="MAPMap">
+    <area shape="circle" data-mkey="1" id="1" coords="688,540,23" data-toggle="modal" data-target="#modaltext" href="#1">
+    <area shape="circle" data-mkey="2" id="2" coords="1295,245,23" data-toggle="modal" data-target="#modaltext" href="#2">
+    <area shape="circle" data-mkey="3" id="3" coords="1528,534,23" data-toggle="modal" data-target="#modaltext" href="#3">
+    <area shape="circle" data-mkey="4" id="4" coords="767,935,23" data-toggle="modal" data-target="#modaltext" href="#4">
+    <area shape="circle" data-mkey="5" id="5" coords="347,920,23" data-toggle="modal" data-target="#modaltext" href="#5">
+    <area shape="circle" data-mkey="6" id="6" coords="535,813,23" data-toggle="modal" data-target="#modaltext" href="#6">
+    <area shape="circle" data-mkey="7" id="7" coords="1323,950,23" data-toggle="modal" data-target="#modaltext" href="#7">
+    <area shape="circle" data-mkey="8" id="8" coords="364,984,23" data-toggle="modal" data-target="#modaltext" href="#8">
+    <area shape="circle" data-mkey="9" id="9" coords="1175,144,23" data-toggle="modal" data-target="#modaltext" href="#9">
+    <area shape="circle" data-mkey="10" id="10" coords="960,252,23" data-toggle="modal" data-target="#modaltext" href="#10">
+    <area shape="circle" data-mkey="11" id="11" coords="578,475,23" data-toggle="modal" data-target="#modaltext" href="#11">
+    <area shape="circle" data-mkey="12" id="12" coords="1583,882,23" data-toggle="modal" data-target="#modaltext" href="#12">
+    <area shape="circle" data-mkey="13" id="13" coords="670,941,23" data-toggle="modal" data-target="#modaltext" href="#13">
+    <area shape="circle" data-mkey="14" id="14" coords="801,618,23" data-toggle="modal" data-target="#modaltext" href="#14">
+    <area shape="circle" data-mkey="15" id="15" coords="477,679,23" data-toggle="modal" data-target="#modaltext" href="#15">
+    <area shape="circle" data-mkey="16" id="16" coords="477,989,23" data-toggle="modal" data-target="#modaltext" href="#16">
+    <area shape="circle" data-mkey="17" id="17" coords="273,1012,23" data-toggle="modal" data-target="#modaltext" href="#17">
+    <area shape="circle" data-mkey="18" id="18" coords="646,749,23" data-toggle="modal" data-target="#modaltext" href="#18">
+    <area shape="circle" data-mkey="19" id="19" coords="1494,896,23" data-toggle="modal" data-target="#modaltext" href="#19">
+    <area shape="circle" data-mkey="20" id="20" coords="1624,624,23" data-toggle="modal" data-target="#modaltext" href="#20">
+    <area shape="circle" data-mkey="21" id="21" coords="1663,655,23" data-toggle="modal" data-target="#modaltext" href="#21">
+    <area shape="circle" data-mkey="22" id="22" coords="572,994,23" data-toggle="modal" data-target="#modaltext" href="#22">
+    <area shape="circle" data-mkey="23" id="23" coords="1632,710,23" data-toggle="modal" data-target="#modaltext" href="#23">
+    <area shape="circle" data-mkey="24" id="24" coords="1516,599,23" data-toggle="modal" data-target="#modaltext" href="#24"></map>
+  <div class="hoverdiv" data-toggle="modal" data-target="#modaltext">
+    <div class="number"><span class="nrNr"></span></div>
+  </div>
+  <!--.hoverdivdisabled(data-toggle="none" onclick=""  data-target="#none")    -->
+  <div class="santa"> <img src="assets/images/santa.png"></div>
+  <div class="clouds"> <img src="assets/images/clouds.png"></div>
+  <div class="center">
+    <div class="mapsterfaster"><img class="main_image" id="main_image33" src="assets/images/map.jpg" width="1800" height="1192" usemap="#MAPMap"></div>
+  </div>
+  <div class="modal fade" id="modaltext" tabindex="-1" role="dialog" aria-labelledby="videomodal" aria-hidden="true">
+    <canvas id="canvas"></canvas>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">    
+        <div class="modal-body"> 
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×   </span></button>
+          <!--.content-1 
+          .content-modal-message 
+            h3.content-text-message   
+          -->
+          <div class="content-1" data-run="">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" id="video" src="" allowscriptaccess="always" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"> </iframe>
+            </div>
+          </div>
+        </div>
+        <!--  button( class='btn btn-success btn_super_power'  ) Play-->
+      </div>
+    </div>
+  </div>
+  <script src="assets/main.min.js"></script>
+  <!--script(src='js/jquery.imagemapster.min.js')-->
+</body>
