@@ -27,9 +27,9 @@ $.ajax({
 }).then((data)=>{
 
       dataHere = data;
-
+      console.log(data);
      dataHere.forEach((element,i) => {
-
+      
         $(collectionLink[i]).attr({ href: element.video_url || '#',
                                   title: element.question
                                });
@@ -144,11 +144,11 @@ hoverdiv.click((event)=>{
 });
 
 
-snowStorm.flakesMax = 150;
+snowStorm.flakesMax = 90;
 snowStorm.animationInterval = 138;
-snowStorm.flakesMaxActive = 96;    
+snowStorm.flakesMaxActive = 60;    
 snowStorm.useTwinkleEffect = false;
-snowStorm.followMouse = true
+snowStorm.followMouse = false;
 snowStorm.freezeOnBlur = false;
 snowStorm.snowStick = false;
 snowStorm.snowCharacter = '•';
