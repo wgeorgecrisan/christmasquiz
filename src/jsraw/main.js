@@ -144,8 +144,8 @@ hoverdiv.click((event)=>{
 });
 
 
-snowStorm.flakesMax = 90;
-snowStorm.animationInterval = 138;
+snowStorm.flakesMax = 80;
+snowStorm.animationInterval = 120;
 snowStorm.flakesMaxActive = 60;    
 snowStorm.useTwinkleEffect = false;
 snowStorm.followMouse = false;
