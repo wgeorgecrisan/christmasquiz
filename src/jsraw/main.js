@@ -11,7 +11,7 @@ var state = {
     number: null,
     stateDisable: false
    }
-
+let dataorphane = '#';
 let urlData = 'https://script.google.com/macros/s/AKfycbyKVHV9bnMU0Dw0ve7foszGh0Ra-0kVkbTmwybq6wZ9GusLBqAS/exec';
 // ajax Call
 
